@@ -2,149 +2,208 @@
 <html>
 	<head>
 		<title> My Portfolio </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<style>
+			section:before{
+				height: 54px;
+				content: "";
+				display: block;
+			}
+			section{
+				min-height: 20vh;
+			}
+			#section-showcase{
+				background-image: url(./images/starscape.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			html{
+				scroll-behavior: smooth;
+			}
+		</style>
 	</head>
 	<body> 
-		<nav id="top-navbar"> 
-			<a href="#section-showcase"><strong>David's Portfolio</strong></a>
-			<ul>
-				<li>   <a href="#section-home"> Home </a>   </li>
-				<li>   <a href="#section-about"> About </a>   </li>
-				<li>   <a href="#section-projects"> Projects </a>   </li>
-				<li>   <a href="#section-blog"> Blog </a>   </li>
-				<li>   <a href="#section-contact"> Contact </a>   </li>
-			</ul>
+		<nav id="top-navbar" class='navbar fixed-top navbar-expend-lg navbar-dark bg-dark'> 
+			<a class='navbar-brand' href="#section-showcase"><strong>David's Portfolio</strong></a>
+			<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
+				<span class='navbar-toggler-icon'></span>
+			</button>
+			<div class='collapse navbar-collapse' id='menu'>
+				<ul class='nav navbar-nav ml-auto'>
+					<li class='nav-item'>   <a class='nav-link' href="#section-home"> Home </a>   </li>
+					<li class='nav-item'>   <a class='nav-link' href="#section-about"> About </a>   </li>
+					<li class='nav-item'>   <a class='nav-link' href="#section-projects"> Projects </a>   </li>
+					<li class='nav-item'>   <a class='nav-link' href="#section-blog"> Blog </a>   </li>
+					<li class='nav-item'>   <a class='nav-link' href="#section-contact"> Contact </a>   </li>
+				</ul>
+			</div>
+			
 		</nav>
-		<section id="section-showcase"> 
-			<div>
+		<section id="section-showcase" class="jumbotron d-flex align-items-center"> 
+			<div class='container text-center text-light'>
 				<h1>Treasure Asteroid </h1>
 				<p> This is a 2d game I am currently making for my classes. Two teams of players will fly around a
 				battlefield, shooting at each other and racing to collect treasures and bring them back to base.</p>
 			</div>
 		</section>
-		<aside id="sidebar"> 
-			<div>
-				<h3> News: </h3>
-				<p> I recently made two prototypes.</p>
-			</div>
-		</aside>
-		<section id="section-home"> 
-			<h1> Welcome! </h1>
-			<hr>
-			<p>
-				Hopefully, you'll enjoy your time looking at this.
-			</p>
-		</section>
-		<section id="section-about"> 
-			<h1> About </h1>
-			<hr>
-			<div>
-				<img src="images/profile.png">
-			</div>
-			<div>
-				<h4> David Hansel </h4>
-				<p>I am a senior year student of UNO working on a degree in computer science,
-					focusing on game development.</p>
-			</div>
-			
-			<table>
-				<thread>
-					<tr>
-						<th colspan='2'> Technical Skills </th>
-					</tr>
-				</thread>
-				<tbody>
-					<tr>
-						<th> Programming Tools </th>
-						<td> Java, Javascript </td>
-					</tr>
-					<tr>
-						<th> Frtontend Tools </th>
-						<td> HTML, CSS </td>
-					</tr>
-					<tr>
-						<th> Database Tools </th>
-						<td> MongoDB, Mongoose, SQL </td>
-					</tr>
-					<tr>
-						<th> Version Control & Development Tools </th>
-						<td> git, github, gitlab </td>
-					</tr>
-					<tr>
-						<th> Architecture & Design </th>
-						<td> OOP, MEAN Stack, REST, Agile, TDD </td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-		<section id="section-projects"> 
-			<h1> Projects </h1>
-			<hr>
-			<p> I've worked on a few android projects using html, as well as projects on unity for my game dev class. </p>
-			<div>
-				<div id ="projects">
-					<a href='#' target ="_blank">
-						<div>
-							<p>Project</p>
-						</div>
-						<img src = 'images/logo.png'>
-						<div>
-							<h4>Asteroid Treasure </h4>
-						</div>
-						<div>
-							<small>by David Hansel</small>
-						</div>
-					</a>
+		<div class='container-fluid'>
+			<aside id="sidebar" class="bg-dark"> 
+				<div class='bg-dark text-light float-right col-4 pt-4 mt-4'>
+					<h3> News: </h3>
+					<p> I recently made two prototypes.</p>
 				</div>
-			</div>
-		</section>
-		<section id="section-blog"> 
-			<h1>Blog</h1>
-			<hr>
-			<p>This blog is about prototyping, something important for game development.</p>
-			<hr>
-			<article>
-				<h3>Topic 1- Paper, Please</h3>
-				<small>Posted by David Hansel on 1/23/20</small>
-				<p>Prototyping is one of the most important aspects because it's where you find how viable your idea is
-				to make reality. Generally, paper prototypes are used in the first step because it's much easier-
-				you can iterate quickly and it takes less setup because of how long it takes to make a computer do something.
-				But most importantly, because there's less investment, it makes the designers less resistant to change and less
-				invested in it. After all, the whole point of the paper prototype is to find problems that go beyond a mere
-				bug or glitch- it's where to find problems with the core game itself. Iteration is fixing these problems and trying
-				out new, bolder things. For example, with my game I decided to add an "AI" enemy that patrolled a path,
-				even though it's a multiplayer game. Testing showed that the addition of it was pretty satisfying and
-				put more risk into the game, so now I can think about how to implement it digitally, whereas if I started
-				digital I might not have even considered AI because of the effort it would have taken.</p>
-				<a href="post1.html">Read More</a>
+			</aside>
+			<section id="section-home" class='bg-primary p-1 container-fluid'> 
+				<h1> Welcome! </h1>
 				<hr>
-			</article>
-		</section>
-		<section id="section-contact"> 
-			<h1>Contact</h1>
-			<hr>
-			<h4>Send Message</h4>
-			<form>
-				<div>
-					<input type="text" id="name" placeholder="David Hansel">
+				<p>
+					Hopefully, you'll enjoy your time looking at this.
+				</p>
+			</section>
+			<section id="section-about" class='bg-success pb-1 container-fluid'> 
+				<h1> About </h1>
+				<hr>
+				<div class='row'>
+					<div class='col-lg-2 col-sm-4'>
+						<img src="images/profile.png" class='img-fluid'>
+					</div>
+					<div class='col-lg-10 col-sm-8'>
+						<h4> David Hansel </h4>
+						<p>I am a senior year student of UNO working on a degree in computer science,
+							focusing on game development.</p>
+					</div>
 				</div>
-				<div>
-					<input type="email" id="email" placeholder="Dav3han@outlook.com">
+				
+				
+				<table class='table mt-4'>
+					<thread>
+						<tr>
+							<th colspan='2'> Technical Skills </th>
+						</tr>
+					</thread>
+					<tbody>
+						<tr>
+							<th> Programming Tools </th>
+							<td> Java, Javascript </td>
+						</tr>
+						<tr>
+							<th> Frtontend Tools </th>
+							<td> HTML, CSS </td>
+						</tr>
+						<tr>
+							<th> Database Tools </th>
+							<td> MongoDB, Mongoose, SQL </td>
+						</tr>
+						<tr>
+							<th> Version Control & Development Tools </th>
+							<td> git, github, gitlab </td>
+						</tr>
+						<tr>
+							<th> Architecture & Design </th>
+							<td> OOP, MEAN Stack, REST, Agile, TDD </td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="section-projects" class='bg-secondary container-fluid'> 
+				<h1> Projects </h1>
+				<hr>
+				<p> I've worked on a few android projects using html, as well as projects on unity for my game dev class. </p>
+				<div class='container'>
+					<div id ="projects" class='card-deck text-center'>
+						<a class='card bg-dark btn' href='#' target ="_blank">
+							<div class='card-header'>
+								<p class='text-light'>Project</p>
+							</div>
+							<img class='card-img-top' src = 'images/logo.png'>
+							<div class='card-body'>
+								<h4 class='card-title text-light'>Asteroid Treasure </h4>
+							</div>
+							<div class='card-footer'>
+								<small class='text-muted'>by David Hansel</small>
+							</div>
+						</a>
+
+						<a class='card' href='#' target ="_blank">
+							<div class='card-header'>
+								<p>Project</p>
+							</div>
+							<img class='card-img-top' src = 'images/logo.png'>
+							<div class='card-body'>
+								<h4 class='card-title'>Tri Card </h4>
+							</div>
+							<div class='card-footer'>
+								<small>by David Hansel</small>
+							</div>
+						</a>
+						<a class='card' href='#' target ="_blank">
+							<div class='card-header'>
+								<p>Project</p>
+							</div>
+							<img class='card-img-top' src = 'images/logo.png'>
+							<div class='card-body'>
+								<h4 class='card-title'>Asteroid Treasure </h4>
+							</div>
+							<div class='card-footer'>
+								<small>by David Hansel</small>
+							</div>
+						</a>
+					</div>
 				</div>
-				<div>
-					<input type="subject" id="subject" placeholder="Subject">
-				</div>
-				<div>
-					<textarea rows="4" id="message" placeholder="Message"></textarea>
-				</div>
-				<button type="submit"> Submit </button>
-			</form>
-		</section>
-		<footer> 
-			<div>
+			</section>
+			<section id="section-blog" class='bg-warning container-fluid pb-1'> 
+				<h1>Blog</h1>
+				<hr>
+				<p>This blog is about prototyping, something important for game development.</p>
+				<hr>
+				<article class='container'>
+					<h3>Topic 1- Paper, Please</h3>
+					<small>Posted by David Hansel on 1/23/20</small>
+					<p>Prototyping is one of the most important aspects because it's where you find how viable your idea is
+					to make reality. Generally, paper prototypes are used in the first step because it's much easier-
+					you can iterate quickly and it takes less setup because of how long it takes to make a computer do something.
+					But most importantly, because there's less investment, it makes the designers less resistant to change and less
+					invested in it. After all, the whole point of the paper prototype is to find problems that go beyond a mere
+					bug or glitch- it's where to find problems with the core game itself. Iteration is fixing these problems and trying
+					out new, bolder things. For example, with my game I decided to add an "AI" enemy that patrolled a path,
+					even though it's a multiplayer game. Testing showed that the addition of it was pretty satisfying and
+					put more risk into the game, so now I can think about how to implement it digitally, whereas if I started
+					digital I might not have even considered AI because of the effort it would have taken.</p>
+					<a class='btn btn-outline-dark' href="post1.html">Read More</a>
+					<hr>
+				</article>
+			</section>
+			<section id="section-contact" class='bg-danger container-fluid'> 
+				<h1>Contact</h1>
+				<hr>
+				<h4 class='text-center'>Send Message</h4>
+				<form>
+					<div class='form-group'>
+						<input class='form-control' type="text" id="name" placeholder="David Hansel">
+					</div>
+					<div>
+						<input class='form-control' type="email" id="email" placeholder="Dav3han@outlook.com">
+					</div>
+					<div>
+						<input class='form-control' type="subject" id="subject" placeholder="Subject">
+					</div>
+					<div>
+						<textarea class='form-control' rows="4" id="message" placeholder="Message"></textarea>
+					</div>
+					<button class='btn btn-lg btn-primary' type="submit"> Submit </button>
+				</form>
+			</section>
+		</div>
+		<footer class='footer bg-light'> 
+			<div class='container text-muted text-center'>
 				<p>Copyright &copy; 2020 David Hansel</p>
 			</div>
 		</footer>
-	
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 	
 	
