@@ -1,0 +1,10 @@
+body{
+	background-color: rgb(109, 122, 143);
+	padding: 0;
+	margin: 0;
+}
+
+.bg-dark{
+	background-color: black;
+	color: rgb(180, 180, 165);
+}
