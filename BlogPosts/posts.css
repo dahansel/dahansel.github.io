@@ -4,6 +4,33 @@ body{
 	margin: 0;
 }
 
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+small{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div{
+    border-radius: 10px;
+
+}
+
 .bg-dark{
 	background-color: black;
 	color: rgb(180, 180, 165);
