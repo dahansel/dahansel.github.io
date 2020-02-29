@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> My Portfolio </title>
+		<title> David's Portfolio </title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+		<link href='style.css' rel="stylesheet" type="text/css">
 		<style>
 			section:before{
 				height: 54px;
@@ -12,9 +13,10 @@
 			}
 			section{
 				min-height: 20vh;
+				margin-top: 2vh;
 			}
 			#section-showcase{
-				background-image: url(./images/starscape.jpg);
+
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
@@ -23,7 +25,7 @@
 			}
 		</style>
 	</head>
-	<body> 
+	<body class="bg-metalblue">
 		<nav id="top-navbar" class='navbar fixed-top navbar-expend-lg navbar-dark bg-dark'> 
 			<a class='navbar-brand' href="#section-showcase"><strong>David's Portfolio</strong></a>
 			<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
@@ -40,7 +42,7 @@
 			</div>
 			
 		</nav>
-		<section id="section-showcase" class="jumbotron d-flex align-items-center"> 
+		<section id="section-showcase" class="jumbotron d-flex align-items-center bg-dark">
 			<div class='container text-center text-light'>
 				<h1>Treasure Asteroid </h1>
 				<p> This is a 2d game I am currently making for my classes. Two teams of players will fly around a
@@ -51,17 +53,18 @@
 			<aside id="sidebar" class="bg-dark"> 
 				<div class='bg-dark text-light float-right col-4 pt-4 mt-4'>
 					<h3> News: </h3>
-					<p> I recently made two prototypes.</p>
+					<p id="news_snippet"> My group and I have started working on our project for Adv. Game Dev: Horizontal Tetris.
+							</p>
 				</div>
 			</aside>
-			<section id="section-home" class='bg-primary p-1 container-fluid'> 
+			<section id="section-home" class='bg-secondary p-1 container-fluid'>
 				<h1> Welcome! </h1>
 				<hr>
 				<p>
 					Hopefully, you'll enjoy your time looking at this.
 				</p>
 			</section>
-			<section id="section-about" class='bg-success pb-1 container-fluid'> 
+			<section id="section-about" class='bg-secondary pb-1 container-fluid'>
 				<h1> About </h1>
 				<hr>
 				<div class='row'>
@@ -70,8 +73,8 @@
 					</div>
 					<div class='col-lg-10 col-sm-8'>
 						<h4> David Hansel </h4>
-						<p>I am a senior year student of UNO working on a degree in computer science,
-							focusing on game development.</p>
+						<p>I'm a senior year student of UNO working on a degree in computer science,
+							focusing on game development. Currently, I have several projects going on.</p>
 					</div>
 				</div>
 				
@@ -79,21 +82,21 @@
 				<table class='table mt-4'>
 					<thread>
 						<tr>
-							<th colspan='2'> Technical Skills </th>
+							<th colspan='2' class="align-items-center"> Technical Skills </th>
 						</tr>
 					</thread>
 					<tbody>
 						<tr>
 							<th> Programming Tools </th>
-							<td> Java, Javascript </td>
+							<td> Java, Javascript, Unity </td>
 						</tr>
 						<tr>
-							<th> Frtontend Tools </th>
+							<th> Frontend Tools </th>
 							<td> HTML, CSS </td>
 						</tr>
 						<tr>
 							<th> Database Tools </th>
-							<td> MongoDB, Mongoose, SQL </td>
+							<td> SQL </td>
 						</tr>
 						<tr>
 							<th> Version Control & Development Tools </th>
@@ -101,20 +104,20 @@
 						</tr>
 						<tr>
 							<th> Architecture & Design </th>
-							<td> OOP, MEAN Stack, REST, Agile, TDD </td>
+							<td>  Agile, Scrums </td>
 						</tr>
 					</tbody>
 				</table>
 			</section>
-			<section id="section-projects" class='bg-secondary container-fluid'> 
+			<section id="section-projects" class='bg-secondary container-fluid'>
 				<h1> Projects </h1>
 				<hr>
 				<p> I've worked on a few android projects using html, as well as projects on unity for my game dev class. </p>
 				<div class='container'>
-					<div id ="projects" class='card-deck text-center'>
+					<div id ="projects" class='card-deck text-center pb-4'>
 						<a class='card bg-dark btn' href='#' target ="_blank">
 							<div class='card-header'>
-								<p class='text-light'>Project</p>
+								<p class='text-light'>Unity</p>
 							</div>
 							<img class='card-img-top' src = 'images/logo.png'>
 							<div class='card-body'>
@@ -125,37 +128,37 @@
 							</div>
 						</a>
 
-						<a class='card' href='#' target ="_blank">
+						<a class='card bg-metalblue btn' href='#' target ="_blank">
 							<div class='card-header'>
-								<p>Project</p>
+								<p>Physical Prototype</p>
 							</div>
 							<img class='card-img-top' src = 'images/logo.png'>
 							<div class='card-body'>
 								<h4 class='card-title'>Tri Card </h4>
 							</div>
 							<div class='card-footer'>
-								<small>by David Hansel</small>
+								<small class='text-muted'>by David Hansel</small>
 							</div>
 						</a>
-						<a class='card' href='#' target ="_blank">
+						<a class='card bg-cream btn' href='#' target ="_blank">
 							<div class='card-header'>
-								<p>Project</p>
+								<p>Unity</p>
 							</div>
 							<img class='card-img-top' src = 'images/logo.png'>
 							<div class='card-body'>
-								<h4 class='card-title'>Asteroid Treasure </h4>
+								<h4 class='card-title'>Horizontal Tetris </h4>
 							</div>
 							<div class='card-footer'>
-								<small>by David Hansel</small>
+								<small class='text-muted'>by Leigh, David, Dang & Joey</small>
 							</div>
 						</a>
 					</div>
 				</div>
 			</section>
-			<section id="section-blog" class='bg-warning container-fluid pb-1'> 
+			<section id="section-blog" class='bg-secondary container-fluid pb-1'>
 				<h1>Blog</h1>
 				<hr>
-				<p>This blog is about prototyping, something important for game development.</p>
+				<p>This blog is about various things I encounter in CSCI.</p>
 				<hr>
 				<article class='container'>
 					<h3>Topic 1- Paper, Please</h3>
@@ -166,13 +169,20 @@
 					</p>
 					<a class='btn btn-outline-dark' href="dahansel.github.io/BlogPosts/post1.html">Read More!</a>
 					<hr>
+					<h3>Topic 2- Enhancements</h3>
+					<small>Posted by David Hansel on 2/28/20</small>
+					<p>This is a list of major non-text changes made to this site.
+
+					</p>
+					<a class='btn btn-outline-dark' href="dahansel.github.io/BlogPosts/post2.html">Read More!</a>
+					<hr>
 				</article>
 			</section>
-			<section id="section-contact" class='bg-danger container-fluid'> 
+			<section id="section-contact" class='bg-secondary container-fluid'>
 				<h1>Contact</h1>
 				<hr>
-				<h4 class='text-center'>Send Message</h4>
-				<form>
+				<a class='btn btn-outline-dark' data-toggle="collapse" data-target="#forms">Send Message</a>
+				<form id="forms" class="collapse">
 					<div class='form-group'>
 						<input class='form-control' type="text" id="name" placeholder="David Hansel">
 					</div>
@@ -189,8 +199,8 @@
 				</form>
 			</section>
 		</div>
-		<footer class='footer bg-light'> 
-			<div class='container text-muted text-center'>
+		<footer class='footer bg-cream'>
+			<div class='container text-muted text-center mt-4'>
 				<p>Copyright &copy; 2020 David Hansel</p>
 			</div>
 		</footer>
@@ -198,6 +208,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="scripts/news.js"></script>
 	</body>
 	
 	
