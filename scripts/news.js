@@ -7,7 +7,8 @@ let newsText = document.getElementById("news_snippet");
 
 let newsArr = ["My group and I have started working on our project for Adv. Game Dev: Horizontal Tetris.",
                 "For Software Engineering, I\'m also in a group project to create a quiz browser app.",
-                "This page will continue to get updates as time allows."];
+                "Currently making an Arkanoid clone for practice.",
+                "Will soon make a way to keep track of a backlog of games."];
 
 function populateNews(news){
     newsText.innerHTML = newsArr[news];
